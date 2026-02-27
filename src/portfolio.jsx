@@ -26,8 +26,8 @@ const PROJECTS = [
     tech: ["React", "Node.js", "Firebase", "Firestore", "Tailwind CSS"],
     color: "#00d9ff",
     icon: "🚗",
-    live: "https://autoswift-bay.vercel.app/",   // 🔗 REPLACE with your live URL
-    code: "https://github.com/Sandipan80/CarServing",   // 🔗 REPLACE with your GitHub repo URL
+    live: "https://your-autoswift-live-url.vercel.app",   // 🔗 REPLACE with your live URL
+    code: "https://github.com/yourusername/auto-swift",   // 🔗 REPLACE with your GitHub repo URL
   },
   {
     title: "Fit Pro",
@@ -36,8 +36,8 @@ const PROJECTS = [
     tech: ["React", "Vite", "Tailwind CSS", "Firebase", "react-router-dom"],
     color: "#10b981",
     icon: "💪",
-    live: "https://fit-pro-kxri.vercel.app/#home",      // 🔗 REPLACE with your live URL
-    code: "https://github.com/Sandipan80/Fit-Pro",      // 🔗 REPLACE with your GitHub repo URL
+    live: "https://your-fitpro-live-url.vercel.app",      // 🔗 REPLACE with your live URL
+    code: "https://github.com/yourusername/fit-pro",      // 🔗 REPLACE with your GitHub repo URL
   },
  
   {
@@ -47,8 +47,8 @@ const PROJECTS = [
     tech: ["React", "Next.js", "MongoDB", "Tailwind CSS", "REST API"],
     color: "#f59e0b",
     icon: "🖥️",
-    live: "under-construction",  // 🔗 REPLACE with your live URL
-    code: "https://github.com/Sandipan80/IT",  // 🔗 REPLACE with your GitHub repo URL
+    live: "https://your-officeasset-live-url.vercel.app",  // 🔗 REPLACE with your live URL
+    code: "https://github.com/yourusername/office-asset",  // 🔗 REPLACE with your GitHub repo URL
   },
 ];
 
@@ -168,7 +168,7 @@ function Navbar({ dark, setDark }) {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <button onClick={() => scrollTo("hero")}
           style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 18, fontWeight: 700, color: "#00d9ff", background: "none", border: "none", cursor: "pointer" }}>
-          <span style={{ color: dark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.3)" }}></span>
+          SSB<span style={{ color: dark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.3)" }}>.dev</span>
         </button>
 
         <div className="hidden md:flex" style={{ alignItems: "center", gap: 32 }}>
@@ -268,9 +268,11 @@ function Hero({ dark }) {
             </motion.div>
 
             <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.7 }}
-              style={{ fontSize: "clamp(2rem, 4vw, 3.5rem)", fontFamily: "'Syne', sans-serif", fontWeight: 900, lineHeight: 1.1, marginBottom: 16, color: dark ? "white" : "#111827" }}>
-              Sandipan<br />
-              <span style={{ color: dark ? "#00d9ff" : "#2563eb" }}>Singh</span> Bhullar
+              style={{ fontSize: "clamp(2.2rem, 4.5vw, 4rem)", fontFamily: "'Plus Jakarta Sans', sans-serif", lineHeight: 1.08, marginBottom: 16, letterSpacing: "-0.03em", color: dark ? "white" : "#0f172a" }}>
+              <span style={{ fontWeight: 300, color: dark ? "rgba(255,255,255,0.5)" : "rgba(15,23,42,0.45)", display: "block" }}>Sandipan</span>
+              <span style={{ fontWeight: 800, display: "block" }}>
+                <span style={{ color: dark ? "#00d9ff" : "#2563eb" }}>Singh</span>{" "}Bhullar
+              </span>
             </motion.h1>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}
@@ -358,11 +360,13 @@ function About({ dark }) {
     <section id="about" style={{ padding: "112px 24px" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <RevealSection>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontFamily: "'JetBrains Mono', monospace", padding: "6px 12px", borderRadius: 999, border: dark ? "1px solid rgba(0,217,255,0.3)" : "1px solid rgba(37,99,235,0.25)", color: dark ? "#00d9ff" : "#2563eb", background: dark ? "rgba(0,217,255,0.05)" : "rgba(37,99,235,0.05)", marginBottom: 16 }}>
-            <User size={12} /> about.me
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
+            <div style={{ width: 3, height: 22, borderRadius: 2, background: dark ? "#00d9ff" : "#2563eb" }} />
+            <span style={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace", textTransform: "uppercase", letterSpacing: "0.18em", color: dark ? "#00d9ff" : "#2563eb", fontWeight: 500 }}>About Me</span>
           </div>
-          <h2 style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontFamily: "'Syne', sans-serif", fontWeight: 900, marginBottom: 64, color: dark ? "white" : "#111827" }}>
-            Crafting digital experiences<br />that actually matter.
+          <h2 style={{ fontSize: "clamp(1.7rem, 3vw, 2.6rem)", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, letterSpacing: "-0.025em", marginBottom: 64, color: dark ? "white" : "#0f172a", lineHeight: 1.15 }}>
+            Crafting digital experiences<br />
+            <span style={{ fontWeight: 300, color: dark ? "rgba(255,255,255,0.45)" : "rgba(15,23,42,0.4)" }}>that actually matter.</span>
           </h2>
         </RevealSection>
 
@@ -377,7 +381,7 @@ function About({ dark }) {
             <div style={{ display: "flex", flexWrap: "wrap", gap: 32, marginTop: 40 }}>
               {[["3+", "Projects Shipped"], ["2+", "Years Coding"], ["4", "Certifications"]].map(([num, label]) => (
                 <div key={label}>
-                  <div style={{ fontSize: 36, fontWeight: 900, fontFamily: "'Syne', sans-serif", color: dark ? "#00d9ff" : "#2563eb" }}>{num}</div>
+                  <div style={{ fontSize: 36, fontWeight: 800, fontFamily: "'Plus Jakarta Sans', sans-serif", letterSpacing: "-0.03em", color: dark ? "#00d9ff" : "#2563eb" }}>{num}</div>
                   <div style={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace", color: dark ? "rgba(255,255,255,0.35)" : "#9ca3af", marginTop: 2 }}>{label}</div>
                 </div>
               ))}
@@ -442,11 +446,13 @@ function Skills({ dark }) {
     <section id="skills" style={{ padding: "112px 24px", background: dark ? "rgba(0,0,0,0.2)" : "rgba(0,0,0,0.02)" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <RevealSection style={{ marginBottom: 64 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontFamily: "'JetBrains Mono', monospace", padding: "6px 12px", borderRadius: 999, border: dark ? "1px solid rgba(0,217,255,0.3)" : "1px solid rgba(37,99,235,0.25)", color: dark ? "#00d9ff" : "#2563eb", background: dark ? "rgba(0,217,255,0.05)" : "rgba(37,99,235,0.05)", marginBottom: 16 }}>
-            <Cpu size={12} /> skills.grid
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
+            <div style={{ width: 3, height: 22, borderRadius: 2, background: dark ? "#00d9ff" : "#2563eb" }} />
+            <span style={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace", textTransform: "uppercase", letterSpacing: "0.18em", color: dark ? "#00d9ff" : "#2563eb", fontWeight: 500 }}>Skills</span>
           </div>
-          <h2 style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontFamily: "'Syne', sans-serif", fontWeight: 900, color: dark ? "white" : "#111827" }}>
-            Tools of the trade.
+          <h2 style={{ fontSize: "clamp(1.7rem, 3vw, 2.6rem)", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, letterSpacing: "-0.025em", color: dark ? "white" : "#0f172a", lineHeight: 1.15 }}>
+            Tools of the{" "}
+            <span style={{ fontWeight: 300, color: dark ? "rgba(255,255,255,0.4)" : "rgba(15,23,42,0.4)" }}>trade.</span>
           </h2>
         </RevealSection>
 
@@ -498,23 +504,9 @@ function ProjectCard({ project, dark, index }) {
             onMouseLeave={e => { e.currentTarget.style.color = dark ? "rgba(255,255,255,0.5)" : "#6b7280"; e.currentTarget.style.borderColor = dark ? "rgba(255,255,255,0.1)" : "#e5e7eb"; }}>
             <Github size={13} /> View Code
           </a>
-          <a href={project.live === "under-construction" ? undefined : project.live}
-  onClick={project.live === "under-construction" ? (e) => e.preventDefault() : undefined}
-  target={project.live === "under-construction" ? undefined : "_blank"}
-  rel="noreferrer"
-  style={{
-    display: "inline-flex", alignItems: "center", gap: 6,
-    fontSize: 12, fontWeight: 600, padding: "7px 14px", borderRadius: 10,
-    background: project.live === "under-construction" ? "rgba(255,255,255,0.06)" : project.color,
-    color: project.live === "under-construction" ? "rgba(255,255,255,0.35)" : "#080c14",
-    textDecoration: "none",
-    boxShadow: project.live === "under-construction" ? "none" : `0 0 16px ${project.color}40`,
-    cursor: project.live === "under-construction" ? "default" : "pointer",
-    border: project.live === "under-construction" ? "1px solid rgba(255,255,255,0.08)" : "none",
-  }}>
-  {project.live === "under-construction" ? "🚧 Under Construction" : <><ExternalLink size={13} /> Live Demo</>}
-
-            
+          <a href={project.live}
+            style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, padding: "7px 14px", borderRadius: 10, background: project.color, color: "#080c14", textDecoration: "none", boxShadow: `0 0 16px ${project.color}40` }}>
+            <ExternalLink size={13} /> Live Demo
           </a>
         </div>
       </div>
@@ -530,11 +522,13 @@ function Projects({ dark }) {
     <section id="projects" style={{ padding: "112px 24px" }}>
       <div style={{ maxWidth: 1280, margin: "0 auto" }}>
         <RevealSection style={{ marginBottom: 64 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontFamily: "'JetBrains Mono', monospace", padding: "6px 12px", borderRadius: 999, border: dark ? "1px solid rgba(0,217,255,0.3)" : "1px solid rgba(37,99,235,0.25)", color: dark ? "#00d9ff" : "#2563eb", background: dark ? "rgba(0,217,255,0.05)" : "rgba(37,99,235,0.05)", marginBottom: 16 }}>
-            <Layers size={12} /> projects.showcase
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
+            <div style={{ width: 3, height: 22, borderRadius: 2, background: dark ? "#00d9ff" : "#2563eb" }} />
+            <span style={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace", textTransform: "uppercase", letterSpacing: "0.18em", color: dark ? "#00d9ff" : "#2563eb", fontWeight: 500 }}>Projects</span>
           </div>
-          <h2 style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontFamily: "'Syne', sans-serif", fontWeight: 900, color: dark ? "white" : "#111827" }}>
-            Things I've built.
+          <h2 style={{ fontSize: "clamp(1.7rem, 3vw, 2.6rem)", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, letterSpacing: "-0.025em", color: dark ? "white" : "#0f172a", lineHeight: 1.15 }}>
+            Things I've{" "}
+            <span style={{ fontWeight: 300, color: dark ? "rgba(255,255,255,0.4)" : "rgba(15,23,42,0.4)" }}>built.</span>
           </h2>
         </RevealSection>
 
@@ -554,11 +548,13 @@ function Timeline({ dark }) {
     <section id="experience" style={{ padding: "112px 24px", background: dark ? "rgba(0,0,0,0.2)" : "rgba(0,0,0,0.02)" }}>
       <div style={{ maxWidth: 860, margin: "0 auto" }}>
         <RevealSection style={{ marginBottom: 64 }}>
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontFamily: "'JetBrains Mono', monospace", padding: "6px 12px", borderRadius: 999, border: dark ? "1px solid rgba(0,217,255,0.3)" : "1px solid rgba(37,99,235,0.25)", color: dark ? "#00d9ff" : "#2563eb", background: dark ? "rgba(0,217,255,0.05)" : "rgba(37,99,235,0.05)", marginBottom: 16 }}>
-            <Briefcase size={12} /> experience.timeline
+          <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 18 }}>
+            <div style={{ width: 3, height: 22, borderRadius: 2, background: dark ? "#00d9ff" : "#2563eb" }} />
+            <span style={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace", textTransform: "uppercase", letterSpacing: "0.18em", color: dark ? "#00d9ff" : "#2563eb", fontWeight: 500 }}>Experience</span>
           </div>
-          <h2 style={{ fontSize: "clamp(1.6rem, 3vw, 2.4rem)", fontFamily: "'Syne', sans-serif", fontWeight: 900, color: dark ? "white" : "#111827" }}>
-            Where I've been.
+          <h2 style={{ fontSize: "clamp(1.7rem, 3vw, 2.6rem)", fontFamily: "'Plus Jakarta Sans', sans-serif", fontWeight: 800, letterSpacing: "-0.025em", color: dark ? "white" : "#0f172a", lineHeight: 1.15 }}>
+            Where I've{" "}
+            <span style={{ fontWeight: 300, color: dark ? "rgba(255,255,255,0.4)" : "rgba(15,23,42,0.4)" }}>been.</span>
           </h2>
         </RevealSection>
 
@@ -619,9 +615,9 @@ export default function Portfolio() {
   const [dark, setDark] = useState(true);
 
   return (
-    <div style={{ minHeight: "100vh", background: dark ? "#080c14" : "#fafafa", color: dark ? "white" : "#111827", fontFamily: "'DM Sans', sans-serif", transition: "background 0.3s, color 0.3s" }}>
+    <div style={{ minHeight: "100vh", background: dark ? "#080c14" : "#fafafa", color: dark ? "white" : "#111827", fontFamily: "'Plus Jakarta Sans', sans-serif", transition: "background 0.3s, color 0.3s" }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500&display=swap');
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         ::-webkit-scrollbar { width: 4px; }

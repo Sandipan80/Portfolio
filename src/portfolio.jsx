@@ -168,7 +168,7 @@ function Navbar({ dark, setDark }) {
       <div style={{ maxWidth: 1280, margin: "0 auto", padding: "0 24px", height: 64, display: "flex", alignItems: "center", justifyContent: "space-between" }}>
         <button onClick={() => scrollTo("hero")}
           style={{ fontFamily: "'JetBrains Mono', monospace", fontSize: 18, fontWeight: 700, color: "#00d9ff", background: "none", border: "none", cursor: "pointer" }}>
-          SSB<span style={{ color: dark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.3)" }}>.dev</span>
+          <span style={{ color: dark ? "rgba(255,255,255,0.3)" : "rgba(0,0,0,0.3)" }}></span>
         </button>
 
         <div className="hidden md:flex" style={{ alignItems: "center", gap: 32 }}>

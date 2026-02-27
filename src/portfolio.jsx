@@ -26,8 +26,8 @@ const PROJECTS = [
     tech: ["React", "Node.js", "Firebase", "Firestore", "Tailwind CSS"],
     color: "#00d9ff",
     icon: "🚗",
-    live: "https://your-autoswift-live-url.vercel.app",   // 🔗 REPLACE with your live URL
-    code: "https://github.com/yourusername/auto-swift",   // 🔗 REPLACE with your GitHub repo URL
+    live: "https://autoswift-bay.vercel.app/",   // 🔗 REPLACE with your live URL
+    code: "https://github.com/Sandipan80/CarServing",   // 🔗 REPLACE with your GitHub repo URL
   },
   {
     title: "Fit Pro",
@@ -36,8 +36,8 @@ const PROJECTS = [
     tech: ["React", "Vite", "Tailwind CSS", "Firebase", "react-router-dom"],
     color: "#10b981",
     icon: "💪",
-    live: "https://your-fitpro-live-url.vercel.app",      // 🔗 REPLACE with your live URL
-    code: "https://github.com/yourusername/fit-pro",      // 🔗 REPLACE with your GitHub repo URL
+    live: "https://fit-pro-kxri.vercel.app/#home",      // 🔗 REPLACE with your live URL
+    code: "https://github.com/Sandipan80/Fit-Pro",      // 🔗 REPLACE with your GitHub repo URL
   },
  
   {
@@ -47,10 +47,11 @@ const PROJECTS = [
     tech: ["React", "Next.js", "MongoDB", "Tailwind CSS", "REST API"],
     color: "#f59e0b",
     icon: "🖥️",
-    live: "https://your-officeasset-live-url.vercel.app",  // 🔗 REPLACE with your live URL
-    code: "https://github.com/yourusername/office-asset",  // 🔗 REPLACE with your GitHub repo URL
+    live: "under-construction",  // 🔗 REPLACE with your live URL
+    code: "https://github.com/Sandipan80/IT",  // 🔗 REPLACE with your GitHub repo URL
   },
 ];
+
 
 const TIMELINE = [
   {
@@ -504,10 +505,25 @@ function ProjectCard({ project, dark, index }) {
             onMouseLeave={e => { e.currentTarget.style.color = dark ? "rgba(255,255,255,0.5)" : "#6b7280"; e.currentTarget.style.borderColor = dark ? "rgba(255,255,255,0.1)" : "#e5e7eb"; }}>
             <Github size={13} /> View Code
           </a>
-          <a href={project.live}
-            style={{ display: "inline-flex", alignItems: "center", gap: 6, fontSize: 12, fontWeight: 600, padding: "7px 14px", borderRadius: 10, background: project.color, color: "#080c14", textDecoration: "none", boxShadow: `0 0 16px ${project.color}40` }}>
-            <ExternalLink size={13} /> Live Demo
+          <a href={project.live === "under-construction" ? undefined : project.live}
+  onClick={project.live === "under-construction" ? (e) => e.preventDefault() : undefined}
+  target={project.live === "under-construction" ? undefined : "_blank"}
+  rel="noreferrer"
+  style={{
+    display: "inline-flex", alignItems: "center", gap: 6,
+    fontSize: 12, fontWeight: 600, padding: "7px 14px", borderRadius: 10,
+    background: project.live === "under-construction" ? "rgba(255,255,255,0.06)" : project.color,
+    color: project.live === "under-construction" ? "rgba(255,255,255,0.35)" : "#080c14",
+    textDecoration: "none",
+    boxShadow: project.live === "under-construction" ? "none" : `0 0 16px ${project.color}40`,
+    cursor: project.live === "under-construction" ? "default" : "pointer",
+    border: project.live === "under-construction" ? "1px solid rgba(255,255,255,0.08)" : "none",
+  }}>
+  {project.live === "under-construction" ? "🚧 Under Construction" : <><ExternalLink size={13} /> Live Demo</>}
+
+            
           </a>
+
         </div>
       </div>
     </motion.div>

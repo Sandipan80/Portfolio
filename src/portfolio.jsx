@@ -41,13 +41,13 @@ const PROJECTS = [
   },
  
   {
-    title: "Office Asset Allocation",
+    title: "Vault",
     subtitle: "IT Helpdesk & Asset Management UI",
     description: "Enterprise-grade IT helpdesk UI for managing office assets, ticket tracking, allocation workflows, and reporting dashboards.",
     tech: ["React", "Next.js", "MongoDB", "Tailwind CSS", "REST API"],
     color: "#f59e0b",
     icon: "🖥️",
-    live: "under-construction",  // 🔗 REPLACE with your live URL
+    live: "https://vault-mu-eight.vercel.app/",  // 🔗 REPLACE with your live URL
     code: "https://github.com/Sandipan80/IT",  // 🔗 REPLACE with your GitHub repo URL
   },
 ];

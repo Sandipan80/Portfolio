@@ -283,7 +283,7 @@ function Hero({ dark }) {
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.65 }}
               style={{ display: "flex", flexWrap: "wrap", gap: 12, marginBottom: 40 }}>
-              <motion.a href="/Resume.pdf" download="Sandipan_Singh_Bhullar_Resume.pdf" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
+              <motion.a href="/Resume..pdf" download="Sandipan_Singh_Bhullar_Resume.pdf" whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
                 style={{ display: "inline-flex", alignItems: "center", gap: 8, padding: "10px 20px", borderRadius: 12, fontWeight: 700, fontSize: 14, textDecoration: "none", background: dark ? "#00d9ff" : "#2563eb", color: dark ? "#080c14" : "white", boxShadow: dark ? "0 0 24px rgba(0,217,255,0.3)" : "0 4px 20px rgba(37,99,235,0.3)", transition: "all 0.2s" }}>
                 <Download size={15} /> Download Resume <ArrowRight size={13} />
               </motion.a>
